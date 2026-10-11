@@ -1,70 +1,10 @@
 class Solution {
 public:
     int fib(int n) {
-        int f0=0;
-        int f1=1;
-        int f2=f1+f0;
-        int f3=f2+f1;
-        int f4=f3+f2;
-        int f5=f4+f3;
-        int f6=f5+f4;
-        int f7=f6+f5;
-        int f8=f7+f6;
-        int f9=f8+f7;
-        int f10=f9+f8;
-        int f11=f10+f9;
-        int f12=f11+f10;
-        int f13=f12+f11;
-        int f14=f13+f12;
-        int f15=f14+f13;
-        int f16=f15+f14;
-        int f17=f16+f15;
-        int f18=f17+f16;
-        int f19=f18+f17;
-        int f20=f19+f18;
-        int f21=f20+f19;
-        int f22=f21+f20;
-        int f23=f22+f21;
-        int f24=f23+f22;
-        int f25=f24+f23;
-        int f26=f25+f24;
-        int f27=f26+f25;
-        int f28=f27+f26;
-        int f29=f28+f27;
-        int f30=f29+f28;
-        switch (n) {
-            case 0: return f0;
-            case 1: return f1;
-            case 2: return f2;
-case 3: return f3;
-case 4: return f4;
-case 5: return f5;
-case 6: return f6;
-case 7: return f7;
-case 8: return f8;
-case 9: return f9;
-case 10: return f10;
-case 11: return f11;
-case 12: return f12;
-case 13: return f13;
-case 14: return f14;
-case 15: return f15;
-case 16: return f16;
-case 17: return f17;
-case 18: return f18;
-case 19: return f19;
-case 20: return f20;
-case 21: return f21;
-case 22: return f22;
-case 23: return f23;
-case 24: return f24;
-case 25: return f25;
-case 26: return f26;
-case 27: return f27;
-case 28: return f28;
-case 29: return f29;
-            case 30: return f30;
-            default : return -1;
-    }
+        int arr[31]={0,1};
+         for (int i=2; i<=n; i++) {
+            arr[i]=arr[i-1]+ arr[i-2];
+         }
+        return arr[n];
     }
 };
